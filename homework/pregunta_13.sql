@@ -43,7 +43,8 @@
 -- 
 --  >>> Escriba su codigo a partir de este punto <<<
 --  
-select K0, avg(c12) FROM tbl1 where c13 > 400 group by K0
+--select K0, avg(c12) FROM tbl1 where c13 > 400.00 group by K0
+SELECT K0, ROUND(avg(c12 + 0.0005),2) AS "avg(c12)" FROM tbl1 WHERE c13 > 400 GROUP BY 1;
 
 
 
